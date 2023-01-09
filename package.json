@@ -36,17 +36,21 @@
     },
     "homepage": "https://github.com/webdriverio/appium-boilerplate#readme",
     "devDependencies": {
+        "@babel/register": "^7.18.9",
         "@typescript-eslint/eslint-plugin": "^5.25.0",
         "@typescript-eslint/parser": "^5.25.0",
         "@wdio/appium-service": "^7.19.5",
         "@wdio/browserstack-service": "^7.19.7",
-        "@wdio/cli": "^7.19.7",
-        "@wdio/local-runner": "^7.19.7",
+        "@wdio/cli": "^7.29.1",
+        "@wdio/cucumber-framework": "^8.1.2",
+        "@wdio/local-runner": "^7.29.1",
         "@wdio/mocha-framework": "^7.19.7",
         "@wdio/sauce-service": "^7.19.7",
-        "@wdio/spec-reporter": "^7.19.7",
+        "@wdio/spec-reporter": "^7.29.1",
+        "chromedriver": "^108.0.0",
         "eslint-plugin-wdio": "^7.19.4",
         "ts-node": "^10.8.0",
-        "typescript": "^4.6.4"
+        "typescript": "^4.6.4",
+        "wdio-chromedriver-service": "^8.0.1"
     }
 }
