@@ -2,36 +2,36 @@ import AppScreen from './AppScreen';
 import Gestures from '../helpers/Gestures';
 
 class LoginScreen extends AppScreen {
-    constructor () {
+    constructor() {
         super('~Login-screen');
     }
 
-    private get loginContainerButton () {return $('~button-login-container');}
-    private get signUpContainerButton () {return $('~button-sign-up-container');}
-    private get loginButton () {return $('~button-LOGIN');}
-    private get signUpButton () {return $('~button-SIGN UP');}
-    private get email () {return $('~input-email');}
-    private get password () {return $('~input-password');}
-    private get repeatPassword () {return $('~input-repeat-password');}
-    private get biometricButton () {return $('~button-biometric');}
+    private get loginContainerButton() { return $('~button-login-container'); }
+    private get signUpContainerButton() { return $('~button-sign-up-container'); }
+    private get loginButton() { return $('~button-LOGIN'); }
+    private get signUpButton() { return $('~button-SIGN UP'); }
+    private get email() { return $('~input-email'); }
+    private get password() { return $('~input-password'); }
+    private get repeatPassword() { return $('~input-repeat-password'); }
+    private get biometricButton() { return $('~button-biometric'); }
 
-    async isBiometricButtonDisplayed () {
+    async isBiometricButtonDisplayed() {
         return this.biometricButton.isDisplayed();
     }
 
-    async tapOnLoginContainerButton(){
+    async tapOnLoginContainerButton() {
         await this.loginContainerButton.click();
     }
 
-    async tapOnSignUpContainerButton(){
+    async tapOnSignUpContainerButton() {
         await this.signUpContainerButton.click();
     }
 
-    async tapOnBiometricButton(){
+    async tapOnBiometricButton() {
         await this.biometricButton.click();
     }
 
-    async submitLoginForm({ username, password }:{username:string; password:string;}) {
+    async submitLoginForm({ username, password }: { username: string; password: string; }) {
         await this.email.setValue(username);
         await this.password.setValue(password);
 
@@ -54,14 +54,14 @@ class LoginScreen extends AppScreen {
         await this.loginButton.click();
     }
 
-    async submitSignUpForm({ username, password }:{username:string; password:string;}) {
+    async submitSignUpForm({ username, password }: { username: string; password: string; }) {
         await this.email.setValue(username);
         await this.password.setValue(password);
         await this.repeatPassword.setValue(password);
 
         if (await driver.isKeyboardShown()) {
             /**
-             * Normally we would hide the keyboard with this command `driver.hideKeyboard()`, but there is an issue for hiding the keyboard
+             * Normally we would hide t`he keyboard with this command `driver.hideKeyboard()`, but there is an issue for hiding the keyboard
              * on iOS when using the command. You will get an error like below
              *
              *  Request failed with status 400 due to Error Domain=com.facebook.WebDriverAgent Code=1 "The keyboard on iPhone cannot be

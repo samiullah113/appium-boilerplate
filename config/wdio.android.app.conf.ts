@@ -26,9 +26,9 @@ config.capabilities = [
         'appium:orientation': 'PORTRAIT',
         'appium:automationName': 'UiAutomator2',
         // The path to the app
-        'appium:app': join(process.cwd(), 'apps/Android-NativeDemoApp-0.4.0.apk'),
+        'appium:app': join(process.cwd(), 'apps/app-release.apk'),
         // @ts-ignore
-        'appium:appWaitActivity': 'com.wdiodemoapp.MainActivity',
+        'appium:appWaitActivity': 'com.awesometsproject.MainActivity',
         'appium:newCommandTimeout': 240,
     },
 ];
