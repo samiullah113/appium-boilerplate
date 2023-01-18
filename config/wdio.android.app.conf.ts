@@ -33,4 +33,5 @@ config.capabilities = [
     },
 ];
 
+
 exports.config = config;
